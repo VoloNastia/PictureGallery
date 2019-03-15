@@ -123,13 +123,13 @@ class ItemListActivity : AppCompatActivity() {
             }
 
             fun bind(item: PicturesContent.PictureItem) {
-                textView.text = item.description
+                contentView.text = item.description
                 if (!Finder.setImageIntoView(parentActivity, item.preview, imageView)) {
                     Loader.load(parentActivity, item.preview, receiver)
                 }
             }
 
-            private val textView: TextView = view.content
+            private val contentView: TextView = view.content
             val imageView: ImageView = view.itemImageView
         }
     }
